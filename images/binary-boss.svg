@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 190" fill="none">
+  <defs>
+    <linearGradient id="helmet" x1="52" x2="165" y1="27" y2="157" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D8FF8D"/>
+      <stop offset="1" stop-color="#87B943"/>
+    </linearGradient>
+    <linearGradient id="visor" x1="68" x2="153" y1="66" y2="125" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#283521"/>
+      <stop offset="1" stop-color="#10170F"/>
+    </linearGradient>
+    <filter id="glow" width="1.8" height="1.8" x="-.4" y="-.4">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <path d="M37 145h146v13a12 12 0 0 1-12 12H49a12 12 0 0 1-12-12v-13Z" fill="#252D20" stroke="#718C4E" stroke-width="2"/>
+  <path d="M52 67c0-31 25-56 58-56s58 25 58 56v62H52V67Z" fill="url(#helmet)" stroke="#E4FFB5" stroke-width="3"/>
+  <path d="M44 76c0-7 5-12 12-12h5v47h-5c-7 0-12-5-12-12V76Zm132 0c0-7-5-12-12-12h-5v47h5c7 0 12-5 12-12V76Z" fill="#A4D85A" stroke="#D8FF8D" stroke-width="2"/>
+  <path d="M64 72a10 10 0 0 1 10-10h72a10 10 0 0 1 10 10v42a10 10 0 0 1-10 10H74a10 10 0 0 1-10-10V72Z" fill="url(#visor)" stroke="#516C3C" stroke-width="2"/>
+  <path d="M83 85h12v19H83V85Zm42 0h12v19h-12V85Z" fill="#C4F269" filter="url(#glow)"/>
+  <path d="M99 110h22" stroke="#FA9B68" stroke-linecap="round" stroke-width="3"/>
+  <path d="M75 143v-13h71v13M93 170v9m34-9v9" stroke="#A8D964" stroke-linecap="round" stroke-width="4"/>
+  <path d="M31 40h16m-8-8v16m142 13h12m-6-6v12" stroke="#FA9B68" stroke-linecap="round" stroke-width="2"/>
+  <text x="12" y="114" fill="#9CBF68" font-family="monospace" font-size="12">01</text>
+  <text x="177" y="137" fill="#9CBF68" font-family="monospace" font-size="12">10</text>
+</svg>

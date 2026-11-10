@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#10130f">
+    <meta name="description" content="BinaryBoss is a quick binary-to-decimal challenge game.">
+    <title>BinaryBoss — Decode the signal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="BinaryBoss home">
+          <span class="brand-mark" aria-hidden="true">B<span>.</span></span>
+          <span class="brand-name">BINARY<span>BOSS</span></span>
+        </a>
+        <span class="topbar-note"><span class="live-dot"></span> ARCADE MODE</span>
+      </header>
+
+      <main>
+        <section class="intro" aria-labelledby="page-title">
+          <p class="eyebrow"><span>01</span> &nbsp; THE BINARY ARENA</p>
+          <h1 id="page-title">Decode the signal.<br><span>Own the board.</span></h1>
+          <p class="intro-copy">A quick-fire binary challenge. Turn the bits into a decimal score and climb the leaderboard.</p>
+        </section>
+
+        <div class="game-layout">
+          <section class="game-card" aria-labelledby="game-title">
+            <div class="card-topline">
+              <span class="section-label"><span class="label-square"></span> TRAINING BAY</span>
+              <span class="round-label" id="round-label">READY TO PLAY</span>
+            </div>
+
+            <div class="challenge">
+              <div class="challenge-copy">
+                <p class="eyebrow">BINARY → DECIMAL</p>
+                <h2 id="game-title">What number<br>are you looking at?</h2>
+                <p class="challenge-hint">Read the 8-bit signal and enter its decimal value.</p>
+              </div>
+              <img class="boss-art" src="images/binary-boss.svg" alt="A friendly robot boss made of glowing binary bits">
+            </div>
+
+            <div class="signal-box" aria-label="Binary number challenge">
+              <span class="signal-caption">INCOMING SIGNAL</span>
+              <output class="binary-number" id="binary-number">0101 1010</output>
+              <span class="signal-unit">BIN</span>
+            </div>
+
+            <div class="score-strip" aria-label="Your scores">
+              <div>
+                <span class="score-caption">CURRENT RUN</span>
+                <strong id="current-score">00</strong>
+              </div>
+              <div class="score-divider" aria-hidden="true"></div>
+              <div>
+                <span class="score-caption">YOUR BEST</span>
+                <strong id="personal-best">00</strong>
+              </div>
+              <span class="score-plus" aria-hidden="true">+10</span>
+            </div>
+
+            <form class="player-form" id="player-form">
+              <label for="player-name">YOUR CALLSIGN</label>
+              <div class="form-row">
+                <input id="player-name" name="playerName" type="text" maxlength="18" autocomplete="nickname" placeholder="Enter a nickname" required>
+                <button class="button button-primary" type="submit">START RUN <span aria-hidden="true">↗</span></button>
+              </div>
+            </form>
+
+            <form class="answer-form" id="answer-form" hidden>
+              <label for="answer">YOUR DECIMAL ANSWER</label>
+              <div class="form-row">
+                <input id="answer" name="answer" type="number" min="0" max="255" inputmode="numeric" placeholder="0 — 255" required>
+                <button class="button button-primary" id="answer-button" type="submit">LOCK IT IN <span aria-hidden="true">↗</span></button>
+              </div>
+              <button class="next-button" id="next-button" type="button" hidden>Next signal <span aria-hidden="true">→</span></button>
+            </form>
+
+            <p class="game-message" id="game-message" role="status" aria-live="polite">Enter your callsign to begin the first round.</p>
+          </section>
+
+          <aside class="leaderboard-card" aria-labelledby="leaderboard-title">
+            <div class="leaderboard-heading">
+              <div>
+                <p class="eyebrow">THE HALL OF FAME</p>
+                <h2 id="leaderboard-title">High scores<span>.</span></h2>
+              </div>
+              <span class="trophy" aria-hidden="true">★</span>
+            </div>
+            <div class="leaderboard-meta">
+              <span>RANK / PLAYER</span>
+              <span>BEST</span>
+            </div>
+            <ol class="leaderboard-list" id="leaderboard-list" aria-live="polite"></ol>
+            <div class="empty-board" id="empty-board">
+              <img src="images/binary-bits.svg" alt="" width="44" height="44">
+              <p>No champions yet.<br><span>Be the first to make the board.</span></p>
+            </div>
+            <p class="storage-note"><span aria-hidden="true">ⓘ</span> Scores save in this browser only. They are not shared across devices.</p>
+          </aside>
+        </div>
+
+        <footer class="page-footer">
+          <span>BINARYBOSS <span class="footer-divider">/</span> THINK IN BITS</span>
+          <span>1 correct answer = <strong>10 points</strong></span>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
